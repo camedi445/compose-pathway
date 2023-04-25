@@ -1,4 +1,4 @@
-package com.merqueo.composepathway
+package com.camedi.composepathway
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -61,7 +61,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.Layout
-import androidx.compose.ui.layout.MeasureResult
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -70,7 +69,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import coil.compose.rememberImagePainter
-import com.merqueo.composepathway.ui.theme.ComposePathwayTheme
+import com.camedi.composepathway.ui.theme.ComposePathwayTheme
+import com.merqueo.composepathway.R
 import kotlinx.coroutines.launch
 import kotlin.math.max
 
@@ -99,7 +99,7 @@ fun MessageCard(message: Message) {
         Spacer(modifier = Modifier.width(8.dp))
         var isExpanded by remember { mutableStateOf(false) }
         val surfaceColor: Color by animateColorAsState(
-            if (isExpanded) MaterialTheme.colors.primary else MaterialTheme.colors.surface,
+            if (isExpanded) MaterialTheme.colors.primary else MaterialTheme.colors.surface
         )
         Column(modifier = Modifier.clickable { isExpanded = !isExpanded }) {
             Text(
@@ -243,8 +243,10 @@ private fun Greeting(name: String) {
             )
             if (expanded) {
                 Text(
-                    text = ("Composem ipsum color sit lazy, " +
-                        "padding theme elit, sed do bouncy. ").repeat(4),
+                    text = (
+                        "Composem ipsum color sit lazy, " +
+                            "padding theme elit, sed do bouncy. "
+                        ).repeat(4)
                 )
             }
         }
@@ -277,7 +279,6 @@ fun PhotographerCard(modifier: Modifier = Modifier) {
             shape = CircleShape,
             color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f)
         ) {
-
         }
         Column(
             modifier = Modifier
@@ -358,7 +359,6 @@ fun LazyList() {
 @Composable
 fun ImageListItem(index: Int) {
     Row(verticalAlignment = Alignment.CenterVertically) {
-
         Image(
             painter = rememberImagePainter(
                 data = "https://developer.android.com/images/brand/Android_Robot.png"
@@ -528,8 +528,7 @@ fun StaggeredGridContent(modifier: Modifier = Modifier) {
         modifier = modifier
             .background(color = Color.LightGray)
             .padding(16.dp)
-            .size(200.dp)
-            .horizontalScroll(rememberScrollState()),
+            .horizontalScroll(rememberScrollState())
     ) {
         StaggeredGrid(rows = 6) {
             for (topic in topics) {
@@ -561,10 +560,13 @@ fun ConstraintLayoutContent() {
             Text("Button 1")
         }
 
-        Text("Text", Modifier.constrainAs(text) {
-            top.linkTo(button1.bottom, margin = 16.dp)
-            centerAround(button1.end)
-        })
+        Text(
+            "Text",
+            Modifier.constrainAs(text) {
+                top.linkTo(button1.bottom, margin = 16.dp)
+                centerAround(button1.end)
+            }
+        )
 
         val barrier = createEndBarrier(button1, text)
         Button(
@@ -598,9 +600,12 @@ fun TwoTexts(modifier: Modifier = Modifier, text1: String, text2: String) {
             text = text1
         )
 
-        Divider(color = Color.Black, modifier = Modifier
-            .fillMaxHeight()
-            .width(1.dp))
+        Divider(
+            color = Color.Black,
+            modifier = Modifier
+                .fillMaxHeight()
+                .width(1.dp)
+        )
         Text(
             modifier = Modifier
                 .weight(1f)

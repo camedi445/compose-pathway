@@ -1,4 +1,4 @@
-package com.merqueo.composepathway.ui.theme
+package com.camedi.composepathway.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

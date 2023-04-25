@@ -1,4 +1,4 @@
-package com.merqueo.composepathway
+package com.camedi.composepathway
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.merqueo.composepathway
+package com.camedi.composepathway
 
 /**
  * Created by Camilo Medina on 18/12/2021

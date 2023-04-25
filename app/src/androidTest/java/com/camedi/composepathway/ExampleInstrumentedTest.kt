@@ -1,4 +1,4 @@
-package com.merqueo.composepathway
+package com.camedi.composepathway
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
