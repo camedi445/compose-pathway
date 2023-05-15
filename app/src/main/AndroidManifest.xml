@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposePathway">
         <activity
-            android:name=".reply.ui.ReplyActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.ComposePathway">
             <intent-filter>
